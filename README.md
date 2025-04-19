@@ -28,9 +28,9 @@ Use practical skills to create a tutorial website that have topics ranged from 5
 
 
 ## Timeline
-✅ - **Week 1**: Planning & GitHub repo
-✅ - **Week 2**: Setup & requirements discussion
-✅ - **Week 3**: Write codes for 2-3 tutorial pages (Virtual environment, project structure, quiz page, home page, linking pages)
+**✅ - Week 1**: Planning & GitHub repo
+**✅ - Week 2**: Setup & requirements discussion
+**✅ - eek 3**: Write codes for 2-3 tutorial pages (Virtual environment, project structure, quiz page, home page, linking pages)
 Progress & Reflection: Wrote the code for Home page, Quiz page, and Markdown Cells page with navigation bar. Run locally without bugs. Client has reviewed and given some comments on features.
 Plan to finish the quiz system this week and update with client.
 The project is mostly processed as planned but finishing homepage instead of other tutorial pages. Other tutorial pages would be programmed based on the revised version of tutorial1.html

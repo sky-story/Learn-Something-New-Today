@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Foundation - Question 3</title>
+  <link rel="stylesheet" href="quiz_q1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="quiz-page">
+  <header>
+    <div class="sidebar">
+      <a href="index.html"><img src="assets/icon1.svg" class="icon" alt="Icon" /></a>
+      <div class="brand-text">Learning<br>Something<br>New</div>
+    </div>
+    <div class="progress-bar"></div>
+    <div class="buttons">
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle">Tutorials</a>
+        <div class="dropdown-content dropdown-down">
+          <a href="tutorial1.html" class="dropdown-item">Markdown Cells</a>
+          <a href="#" class="dropdown-item">Python Foundation</a>
+          <a href="#" class="dropdown-item">GitHub Uploads</a>
+          <a href="#" class="dropdown-item">Copilot Application</a>
+        </div>
+      </div>
+      <a href="quiz.html">Quiz</a>
+      <a href="#">Milestones</a>
+      <a href="#">My Notebook</a>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="quiz-title">Quiz</h1>
+    <h2 class="quiz-subtitle">Python Foundation</h2>
+    
+    <div class="question-container">
+      <h3 class="question-title">Question 3</h3>
+      <p class="question-text">Given s = "python", what does s[::-2] return?</p>
+      
+      <div class="answer-options">
+        <div class="answer-option" id="option-a">A. 'noth'</div>
+        <div class="answer-option" id="option-b">B. 'nhy'</div>
+        <div class="answer-option" id="option-c">C. 'nohtyp'</div>
+        <div class="answer-option" id="option-d">D. 'nhy'</div>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Navigation Buttons -->
+  <a href="quiz_q2.html" class="nav-button prev"><i class="arrow arrow-left"></i></a>
+  <a href="quiz_q4.html" class="nav-button"><i class="arrow arrow-right"></i></a>
+  
+  <script>
+    // JavaScript to handle the clicks and navigation
+    document.getElementById('option-a').addEventListener('click', function() {
+      window.location.href = 'quiz_q3_incorrect.html';
+    });
+    
+    document.getElementById('option-b').addEventListener('click', function() {
+      window.location.href = 'quiz_q3_correct.html';
+    });
+    
+    document.getElementById('option-c').addEventListener('click', function() {
+      window.location.href = 'quiz_q3_incorrect.html';
+    });
+    
+    document.getElementById('option-d').addEventListener('click', function() {
+      window.location.href = 'quiz_q3_incorrect.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Foundation</title>
+  <link rel="stylesheet" href="tutorial2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <p>Learning<br>Something<br>New</p>
+    </div>
+    <nav>
+      <div class="nav-section">
+        <a href="#">Tutorials</a>
+        <a href="#">Markdown Cells</a>
+        <a href="#" class="active">Python Foundation</a>
+        <a href="#">GitHub Uploads</a>
+        <a href="#">Copilot Application</a>
+      </div>
+      <div class="nav-section">
+        <a href="#">Quiz</a>
+        <a href="#">My Notebook</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Python Foundation</h1>
+
+    <div class="code-block">
+      <div class="code-label">python</div>
+      <pre class="code-content">
+numbers = [1, 3, 5, 15, 30, 45]
+for i in range(len(numbers)):
+    if numbers[i] % 3 == 0 and numbers[i] % 5 == 0:
+        numbers[i] = "FizzBuzz"
+    elif numbers[i] % 3 == 0:
+        numbers[i] = "Fizz"
+    elif numbers[i] % 5 == 0:
+        numbers[i] = "Buzz"
+print(numbers)  # ['1', 'Fizz', '5', 'FizzBuzz', 'FizzBuzz', 'FizzBuzz']</pre>
+    </div>
+
+    <section class="section">
+      <h2>Introduction</h2>
+      <p>Python is a high-level, interpreted programming language known for its simplicity and readability. It supports procedural, object-oriented, and functional styles. The reference interpreter (CPython) is open-source and runs on many OSes. Learning Python sets you up for success in data science, web dev, automation scripts, and more.</p>
+    </section>
+
+    <section class="section">
+      <h2>Syntax Basics</h2>
+      
+      <div class="syntax-item">
+        <p>Indentation is code structure.<br>
+        Blocks are denoted by consistent indentation, not braces or keywords.</p>
+      </div>
+      
+      <div class="syntax-item">
+        <p>Comments: <span class="code-inline"># single-line</span></p>
+        <p><span class="code-inline">"""Multi-line"""</span> (can serve as multiline comments or docstrings)</p>
+      </div>
+      
+      <div class="syntax-item">
+        <p>Variables are dynamically typed.<br>
+        Just assign and go:</p>
+        <p><span class="code-inline">name = "Alice"</span></p>
+      </div>
+      
+      <div class="syntax-item">
+        <p>Modules are imported with:</p>
+        <p><span class="code-inline">import module</span></p>
+        <p><span class="code-inline">from module import item</span></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Core Data Types</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Types</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Numbers</td>
+            <td>
+              <span class="code-tag">int</span>
+              <span class="code-tag">float</span>
+              <span class="code-tag">complex</span>
+              <span class="code-tag">decimal.Decimal</span>
+              <span class="code-tag">fraction.Fraction</span>
+            </td>
+            <td>Unlimited precision integer, double-precision float, etc.</td>
+          </tr>
+          <tr>
+            <td>Text</td>
+            <td><span class="code-tag">str</span></td>
+            <td>Immutable Unicode</td>
+          </tr>
+          <tr>
+            <td>Sequence</td>
+            <td>
+              <span class="code-tag">list</span>
+              <span class="code-tag">tuple</span>
+              <span class="code-tag">range</span>
+            </td>
+            <td>Lists are mutable, tuples aren't</td>
+          </tr>
+          <tr>
+            <td>Set</td>
+            <td>
+              <span class="code-tag">set</span>
+              <span class="code-tag">frozenset</span>
+            </td>
+            <td>Fast membership tests, math set ops</td>
+          </tr>
+          <tr>
+            <td>Mapping</td>
+            <td><span class="code-tag">dict</span></td>
+            <td>Hash-based key-value store</td>
+          </tr>
+          <tr>
+            <td>Binary</td>
+            <td>
+              <span class="code-tag">bytes</span>
+              <span class="code-tag">bytearray</span>
+              <span class="code-tag">memoryview</span>
+            </td>
+            <td>For raw binary data</td>
+          </tr>
+          <tr>
+            <td>None</td>
+            <td><span class="code-tag">None</span></td>
+            <td>The absence of a value (like null)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Control Flow</h2>
+      <div class="control-flow">
+        <div class="flow-group">
+          <h3>Conditionals</h3>
+          <div class="flow-box">
+            <span class="code-tag">if</span>
+            <span class="code-tag">elif</span>
+            <span class="code-tag">else</span>
+          </div>
+        </div>
+
+        <div class="flow-group">
+          <h3>Loops</h3>
+          <div class="flow-box">
+            <span class="code-tag">for</span>
+            <span class="code-tag">while</span>
+          </div>
+          <div class="flow-box">
+            <span class="code-tag">break</span>
+            <span class="code-tag">continue</span>
+            <span class="code-tag">pass</span>
+          </div>
+        </div>
+
+        <div class="flow-group">
+          <h3>Loop Functions</h3>
+          <div class="flow-box">
+            <span class="code-tag">range</span>
+            <span class="code-tag">enumerate</span>
+            <span class="code-tag">zip</span>
+          </div>
+        </div>
+
+        <div class="flow-group">
+          <h3>Comprehensions</h3>
+          <div class="flow-box">
+            <span class="code-tag">list</span>
+            <span class="code-tag">dict</span>
+            <span class="code-tag">set</span>
+          </div>
+          <p>transform and filter data in one line</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Functions</h2>
+      <div class="function-layout">
+        <div class="function-col">
+          <h3>Definition & Use</h3>
+          <ul>
+            <li>Define with: <span class="code-inline">def my_function():</span></li>
+            <li>Flexible parameters: default values, *args, **kwargs</li>
+            <li>Functions are first-class objects: pass as arguments, return them</li>
+          </ul>
+        </div>
+        <div class="function-col">
+          <h3>Advanced Features</h3>
+          <ul>
+            <li>Lambda: small anonymous functions <span class="code-inline">lambda x, y: x + y</span></li>
+            <li>Decorators: functions that modify functions</li>
+            <li>Recursion: use with clear exit condition to avoid stack overflow</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Standard-Library Highlights</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Area</th>
+            <th>Go-to Modules</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>File & path</td>
+            <td>
+              <span class="code-tag">pathlib</span>
+              <span class="code-tag">os</span>
+              <span class="code-tag">shutil</span>
+            </td>
+          </tr>
+          <tr>
+            <td>Text parsing</td>
+            <td>
+              <span class="code-tag">re</span>
+              <span class="code-tag">textwrap</span>
+              <span class="code-tag">csv</span>
+              <span class="code-tag">json</span>
+              <span class="code-tag">xml.parser</span>
+            </td>
+          </tr>
+          <tr>
+            <td>Data structures</td>
+            <td>
+              <span class="code-tag">collections</span>
+              <span class="code-tag">array</span>
+              <span class="code-tag">heapq</span>
+              <span class="code-tag">bisect</span>
+            </td>
+          </tr>
+          <tr>
+            <td>Datetime</td>
+            <td>
+              <span class="code-tag">datetime</span>
+              <span class="code-tag">calendar</span>
+            </td>
+          </tr>
+          <tr>
+            <td>Concurrency</td>
+            <td>
+              <span class="code-tag">threading</span>
+              <span class="code-tag">multiprocessing</span>
+              <span class="code-tag">asyncio</span>
+              <span class="code-tag">concurrent.futures</span>
+            </td>
+          </tr>
+          <tr>
+            <td>Testing</td>
+            <td>
+              <span class="code-tag">unittest</span>
+              <span class="code-tag">doctest</span>
+              <span class="code-tag">unittest.mock</span>
+            </td>
+          </tr>
+          <tr>
+            <td>Cryptography / Hashing</td>
+            <td>
+              <span class="code-tag">hashlib</span>
+              <span class="code-tag">hmac</span>
+              <span class="code-tag">secrets</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Tooling & Ecosystem</h2>
+      <div class="ecosystem">
+        <div class="eco-item">
+          <span class="eco-text">Virtual environments: python -m venv, conda, pipx</span>
+        </div>
+        <div class="eco-item">
+          <span class="eco-text">Linters & formatters: mypy, flake8, pylint, black, isort</span>
+        </div>
+        <div class="eco-item">
+          <span class="eco-text">Build/packaging: pip, pip-tools, poetry, hatch</span>
+        </div>
+        <div class="eco-item">
+          <span class="eco-text">Testing frameworks: pytest, hypothesis (property-based)</span>
+        </div>
+        <div class="eco-item">
+          <span class="eco-text">Extension capability: Jupyter, Python APIs</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Learning Something New 2025</p>
+  </footer>
+</body>
+</html>

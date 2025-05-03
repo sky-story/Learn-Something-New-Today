@@ -43,8 +43,28 @@ Plan to finish the quiz system this week and update with client.
 
 The project is mostly processed as planned but finishing homepage instead of other tutorial pages. Other tutorial pages would be programmed based on the revised version of tutorial1.html
 
-- **Week 4**: Write codes for Python Foundation page, Github Uploads page, and Copilot Application page.
-- **Week 5**: Complete codes for other tutorial pages & homepage design
+✅ - **Week 4**: Write codes for Python Foundation page and quiz section
+
+Created the Python Foundation tutorial page with structured sections and consistent layout
+
+Added code examples and explanations for Python basics
+
+Built the quiz section with multiple-choice questions related to the tutorial content
+
+
+✅ - **Week 5**: Complete codes for other tutorial pages & quiz section
+
+
+Implemented interactive quiz logic with correct and incorrect answer validation
+
+Integrated navigation to allow users to move between questions
+
+Ensured design accessibility and responsiveness across devices
+
+Ensured smooth page transitions and functional logic between all tutorial and quiz pages
+
+Completed internal testing for navigation and quiz performance
+
 - **Week 6**: Complete codes for other tutorial pages & homepage design
 - **Week 7**: Quiz system & accomplishment design
 - **Week 8**: Interactive animations integration

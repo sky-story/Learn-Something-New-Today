@@ -90,6 +90,40 @@ Implemented interactive notebook feature
 - **Week 10**: Demo
 
 
+
+
+Setup Instructions
+Follow these steps to run the project locally:
+
+1. Clone the Repository
+git clone https://github.com/sky-story/Learn-Something-New-Today.git
+cd tutorial-website
+Replace YOUR_USERNAME with your actual GitHub username if not yet set.
+
+2. Set Up a Virtual Environment (optional but recommended)
+For Mac/Linux:
+python3 -m venv venv
+source venv/bin/activate
+For Windows:
+python -m venv venv
+venv\Scripts\activate
+3. Install Required Dependencies
+Make sure you have Python installed (preferably 3.8+). Then run:
+
+pip install -r requirements.txt
+If using a simple front-end only (HTML/CSS/JS), you may not have any requirements.txt, and can skip this step.
+
+4. Run the App Locally
+If it’s a front-end app only, just open index.html in your browser:
+
+open index.html         # macOS
+start index.html        # Windows
+Or use a live server extension in VSCode for hot-reloading and easier development.
+
+If you're using a Python-based server (e.g. Flask), run:
+python app.py
+
+
 ## Contact Information of the Team
 - **Developer & Designer**: Yishuai Zheng (yishuaiz@uw.edu)
 - **Client**: Ningbo Li (ningbo@uw.edu)

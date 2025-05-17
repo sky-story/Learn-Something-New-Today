@@ -1,258 +1,342 @@
-/* Base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  body {
+  html, body {
+    height: 100%;
     font-family: 'Jersey 20', sans-serif;
-    line-height: 1.6;
-    color: #333;
+    overflow-x: hidden;
+  }
+  
+  body {
     background: linear-gradient(to bottom, #003cff, #b67cbf);
     color: white;
-    padding-bottom: 50px;
-  }
-  
-  /* Header */
-  header {
     display: flex;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
+    flex-direction: column;
   }
   
-  .logo {
+  .page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ✅ Allows scrollable page */
+  padding: 20px 40px;
+  position: relative;
+}
+  
+  /* Top brand styling */
+  .top-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    margin-left: 60px;
+  }
+  
+  
+  .brand-text {
     font-size: 1.2rem;
     line-height: 1.2;
-    margin-right: 40px;
   }
-  
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .nav-section {
-    display: flex;
-    gap: 15px;
-  }
-  
-  nav a {
-    color: white;
+
+  .brand-link {
     text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-  }
-  
-  nav a:hover, nav a.active {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  /* Main content */
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    margin: 20px 0;
-    text-align: left;
-  }
-  
-  h2 {
-    font-size: 1.8rem;
-    margin: 25px 0 15px 0;
     color: white;
   }
   
-  h3 {
-    font-size: 1.3rem;
-    margin: 0 0 10px 0;
-    color: white;
+  .title {
+    font-size: 5rem;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 60px;
   }
   
-  p {
-    margin-bottom: 15px;
+  /* Arrow styling */
+  .arrow-svg {
+    width: 100px;
+    margin-left: 60px;
+    margin-top: 20px;
+    display: block;
+    transition: transform 0.3s ease;
   }
   
-  .section {
-    margin: 40px 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    padding: 25px;
-    color: #003cff;
+  .arrow-svg:hover {
+    transform: translateX(10px);
   }
   
-  /* Code block */
-  .code-block {
-    background-color: #272822;
-    border-radius: 8px;
-    margin: 25px 0;
-    overflow: hidden;
-  }
-  
-  .code-label {
-    background-color: #1e1e1e;
-    padding: 8px 15px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.9rem;
-  }
-  
-  .code-content {
-    padding: 15px;
-    font-family: 'JetBrains Mono', monospace;
-    white-space: pre;
-    overflow-x: auto;
-    color: #f8f8f2;
-    line-height: 1.5;
-  }
-  
-  .code-inline {
-    font-family: 'JetBrains Mono', monospace;
-    background-color: white;
-    color: #003cff;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.9em;
-  }
-  
-  .code-tag {
-    font-family: 'JetBrains Mono', monospace;
-    background-color: white;
-    color: #003cff;
-    padding: 3px 8px;
-    border-radius: 4px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    display: inline-block;
-    font-size: 0.9em;
-  }
-  
-  /* Syntax basics */
-  .syntax-item {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-  }
-  
-  /* Data tables */
-  .data-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 15px 0;
-  }
-  
-  .data-table th {
-    background-color: rgba(0, 60, 255, 0.2);
-    color: white;
-    text-align: left;
-    padding: 12px;
-  }
-  
-  .data-table td {
-    padding: 12px;
-    border-top: 1px solid rgba(0, 60, 255, 0.1);
-  }
-  
-  .data-table tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Control flow */
-  .control-flow {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .flow-group {
-    flex: 1;
-    min-width: 200px;
-  }
-  
-  .flow-box {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    padding: 12px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-  
-  /* Functions */
-  .function-layout {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  
-  .function-col {
-    flex: 1;
-    min-width: 300px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    padding: 20px;
-  }
-  
-  .function-col ul {
-    list-style-position: inside;
-    padding-left: 10px;
-  }
-  
-  .function-col li {
-    margin-bottom: 10px;
-  }
-  
-  /* Ecosystem */
-  .ecosystem {
+  /* Sidebar styling with hover effects */
+  .sidebar {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    font-size: 1.2rem;
+    padding: 0 40px;
   }
   
-  .eco-item {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    padding: 15px;
-  }
-  
-  .eco-text {
-    font-family: 'JetBrains Mono', monospace;
+  .sidebar-link {
+    text-decoration: none;
+    background: white;
     color: #003cff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    width: fit-content;
+    transition: all 0.3s ease; /* Changed to 'all' to include both transform and background color */
   }
   
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    background-color: rgba(0, 60, 255, 0.5);
+  .sidebar-link:hover {
+    transform: translateX(10px);
+    background: #e0e0ff; /* Added the hover background color */
   }
   
-  /* Responsive */
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-    }
-    
-    .logo {
-      margin-bottom: 15px;
-    }
-    
-    .nav-section {
-      flex-wrap: wrap;
-    }
-    
-    .function-layout {
-      flex-direction: column;
-    }
-    
-    .control-flow {
-      flex-direction: column;
-    }
+  .bottom-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    max-width: 600px;
+    opacity: 0.5;
   }
+
+  /* Dropdown menu styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  .dropdown-up {
+    bottom: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .dropdown-down {
+    top: 100%;
+    margin-top: 10px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown-item {
+    color: #003cff;
+    padding: 6px 12px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #e0e0ff;
+    transform: translateX(10px);
+  }
+
+  .intro-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 100px 60px 60px 60px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.intro-title {
+  font-size: 4rem;
+  font-family: 'Jersey 20', sans-serif;
+  flex: 1 1 300px;
+  color: white;
+}
+
+.intro-paragraph {
+  flex: 2 1 500px;
+  font-size: 1.1rem;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: white;
+  max-width: 600px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+.syntax-section {
+  margin: 100px 60px 60px 60px;
+}
+
+.syntax-title {
+  font-size: 4rem;
+  font-family: 'Jersey 20', sans-serif;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.syntax-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.syntax-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(25% - 15px);
+  min-width: 240px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.syntax-box code {
+  background: #111;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.section {
+  margin: 100px 60px;
+  color: white;
+}
+
+.section h2 {
+  font-size: 3rem;
+  font-family: 'Jersey 20', sans-serif;
+  margin-bottom: 30px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.data-table th,
+.data-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.data-table th {
+  background-color: rgba(255, 255, 255, 0.15);
+  font-weight: bold;
+}
+
+.tag {
+  background: #111;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-right: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+  display: inline-block;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.section-image {
+  max-width: 70%;
+  height: auto;
+  opacity: 0.95;
+}
+
+.functions-section {
+  padding: 60px 40px;
+}
+
+.section-title {
+  font-size: 4rem;
+  margin-bottom: 40px;
+  font-family: 'Jersey 20', sans-serif;
+}
+
+.function-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.function-box {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 25px;
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+}
+
+.code-box {
+  background-color: black;
+  color: white;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+.stdlib-section {
+  margin-top: 4rem;
+  margin: 100px 60px;
+}
+
+.stdlib-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  background: none; /* removes white background */
+  color: inherit;    /* inherit existing text color */
+}
+
+.stdlib-table th,
+.stdlib-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.stdlib-table th {
+  font-weight: bold;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  background: none; /* removes white bg */
+}
+
+.module {
+  background: #111;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-right: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* subtle shadow like your screenshot */
+}
+

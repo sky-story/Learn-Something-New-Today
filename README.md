@@ -65,8 +65,26 @@ Ensured smooth page transitions and functional logic between all tutorial and qu
 
 Completed internal testing for navigation and quiz performance
 
-- **Week 6**: Complete codes for other tutorial pages & homepage design
-- **Week 7**: Quiz system & accomplishment design
+✅ - **Week 6**: Quiz system & accomplishment design
+
+Completed homepage design
+
+Completed code implementation for quiz interactions
+
+Completed quiz system
+
+
+✅ - **Week 7**: Complete codes for Notbook and tutorial pages
+
+Finished Python foundation tutorial page
+
+Completed accomplishment system design
+
+Completed Notebook section design
+
+Implemented interactive notebook feature
+
+
 - **Week 8**: Interactive animations integration
 - **Week 9**: Interactive animations integration & publish site
 - **Week 10**: Demo

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CS Learning Notebook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="notebook.css" />
+</head>
+<body class="notebook-page">
+
+  <div class="page-wrapper">
+
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-text">Learning<br>Something<br>New</div>
+      <nav class="sidebar-menu">
+        <a href="tutorial1.html" class="menu-item">Markdown Cells</a>
+        <a href="tutorial2.html" class="menu-item">Python Foundation</a>
+        <a href="#" class="menu-item">GitHub Uploads</a>
+        <a href="#" class="menu-item">Copilot Application</a>
+      </nav>
+    </aside>
+
+    <div class="main-wrapper">
+
+      <button id="sidebar-toggle" aria-label="Toggle Sidebar">☰</button>
+
+      <main class="notebook-content">
+        <h1>Computer Science Learning Notebook</h1>
+
+        <section class="notebook-section">
+          <h2>Introduction to Algorithms</h2>
+          <p>Algorithms are step-by-step instructions for solving problems efficiently.</p>
+        </section>
+
+        <section class="notebook-section">
+          <h2>Sample Python Code</h2>
+          <pre><code>def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+</code></pre>
+        </section>
+
+        <section class="notebook-section">
+          <h2>Key Concepts</h2>
+          <ul>
+            <li>Time Complexity</li>
+            <li>Space Complexity</li>
+            <li>Big O Notation</li>
+          </ul>
+        </section>
+      </main>
+
+    </div>
+
+  </div>
+
+  <script src="sidebar.js"></script>
+</body>
+</html>

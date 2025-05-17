@@ -1,0 +1,151 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Jersey 20', sans-serif;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, #003cff, #b67cbf);
+  color: white;
+}
+
+/* Layout */
+.page-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  padding-left: 60px;
+  margin-top: 50px;
+  flex-shrink: 0;
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: transparent;
+  transition: margin-left 0.3s ease;
+}
+
+/* Sidebar hidden */
+.sidebar.closed {
+  margin-left: -300px;
+}
+
+/* Brand text */
+.brand-text {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  user-select: none;
+}
+
+/* Sidebar menu links */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.menu-item {
+  color: #003cff;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.menu-item:hover {
+  background: #e0e0ff;
+}
+
+/* Main wrapper (holds toggle button + content) */
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 60px;
+  max-width: 100%;
+  transition: padding-left 0.3s ease;
+}
+
+/* When sidebar is closed, expand main padding */
+.main-wrapper.expanded {
+  padding-left: 20px;
+}
+
+/* Sidebar toggle button */
+#sidebar-toggle {
+  align-self: flex-start;
+  background: #003cff;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-bottom: 40px;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+#sidebar-toggle:hover {
+  background: #0022cc;
+}
+
+/* Notebook content */
+.notebook-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.notebook-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 40px;
+}
+
+.notebook-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: rgba(255 255 255 / 0.1);
+  border-radius: 12px;
+  font-family: 'Arial', sans-serif;
+}
+
+}
+
+.notebook-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.notebook-section p,
+.notebook-section ul {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+pre {
+  background: rgba(255 255 255 / 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  overflow-x: auto;
+  color: #e0e0ff;
+  margin-top: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}

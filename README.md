@@ -85,8 +85,22 @@ Completed Notebook section design
 Implemented interactive notebook feature
 
 
-- **Week 8**: Interactive animations integration
-- **Week 9**: Interactive animations integration & publish site
+✅ - **Week 8**: Interactive animations integration
+
+Finished Markdown Cells, Python foundation tutorial page
+
+Refine quiz sections
+
+Completed Notebook section design
+
+Refine interactive notebook feature
+
+✅ - **Week 9**: Interactive animations integration & publish site
+
+Finished GitHub Uploads tutorial page
+
+Add collection icon and function of adding notes to notebook
+
 - **Week 10**: Demo
 
 

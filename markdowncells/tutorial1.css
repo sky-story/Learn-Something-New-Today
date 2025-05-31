@@ -1,0 +1,574 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Jersey 20', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(to bottom, #003cff, #b67cbf);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px 40px;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+/* Top brand styling */
+.top-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 40px;
+  margin-left: 60px;
+}
+
+.brand-text {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.brand-link {
+  text-decoration: none;
+  color: white;
+}
+
+.title {
+  font-size: 5rem;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  margin-left: 60px;
+}
+
+/* Arrow styling */
+.arrow-svg {
+  width: 100px;
+  margin-left: 60px;
+  margin-top: 20px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.arrow-svg:hover {
+  transform: translateX(10px);
+}
+
+/* Introduction Section */
+.intro-section {
+  margin: 100px 0 80px 0;
+  padding: 0 60px;
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  max-width: 1200px;
+}
+
+.intro-title {
+  flex: 0 0 auto;
+}
+
+.intro-title h2 {
+  font-size: 4rem;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.intro-text {
+  flex: 1;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+}
+
+/* Logo Section */
+.logo-section {
+  margin: 80px 0 100px 0;
+  padding: 0 60px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 3000px;
+  align-items: center;
+}
+
+.logo-title {
+  margin-bottom: 60px;
+}
+
+.logo-title h2 {
+  font-size: 3.5rem;
+  font-weight: normal;
+  text-align: right;
+}
+
+.logo-boxes {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo-box {
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 40px 30px;
+  text-align: center;
+  min-width: 400px;
+  min-height: 400px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-box:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.32);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.logo-image {
+  width: 130px;
+  height: 130px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.logo-label {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.logo-sublabel {
+  font-size: 1.1rem;
+  opacity: 1;
+  font-family: Arial, sans-serif;
+}
+
+/* Chart Section for Create or Select a Cell - Updated to be wider and centered */
+.chart-section-main {
+  margin: 100px 0;
+  padding: 0 60px;
+}
+
+.chart-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.chart-section-title {
+  text-align: left;
+  width: 100%;
+}
+
+.chart-section-title h2 {
+  font-size: 4rem;
+  font-family: 'Jersey 20', sans-serif;
+  color: white;
+  font-weight: normal;
+}
+
+.chart-section-content {
+  width: 100%;
+}
+
+.chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.chart-step {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 50px 40px;
+  text-align: center;
+  flex: 1;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  min-height: 220px;
+}
+
+.chart-step:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #003cff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Jersey 20', sans-serif;
+}
+
+.step-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-family: 'Jersey 20', sans-serif;
+  color: white;
+}
+
+.step-content p {
+  font-size: 1.3rem;
+  font-family: Arial, sans-serif;
+  opacity: 0.95;
+  line-height: 1.5;
+  color: white;
+}
+
+.chart-arrow {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+}
+
+/* Table Sections - Updated to be centered below title */
+.table-section {
+  margin: 100px 0;
+  padding: 0 60px;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.table-title {
+  text-align: left;
+  width: 100%;
+}
+
+.table-title h2 {
+  font-size: 4rem;
+  font-family: 'Jersey 20', sans-serif;
+  color: white;
+  font-weight: normal;
+}
+
+.table-content {
+  width: 100%;
+  max-width: 1400px;
+}
+
+.tutorial-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.tutorial-table th,
+.tutorial-table td {
+  padding: 20px 24px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tutorial-table th {
+  font-weight: bold;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 1.2rem;
+}
+
+.tutorial-table td {
+  color: white;
+  font-size: 1.05rem;
+}
+
+.tutorial-table code {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+}
+
+.tutorial-table strong {
+  font-weight: bold;
+}
+
+.tutorial-table em {
+  font-style: italic;
+}
+
+.tutorial-table a {
+  color: #90cdf4;
+  text-decoration: underline;
+}
+
+/* Sidebar styling with hover effects */
+.sidebar {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1.2rem;
+  padding: 0 40px;
+  z-index: 1000;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  background: white;
+  color: #003cff;
+  padding: 6px 12px;
+  border-radius: 5px;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.sidebar-link:hover {
+  transform: translateX(10px);
+  background: #e0e0ff;
+}
+
+.bottom-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  max-width: 600px;
+  opacity: 0.3;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.dropdown-up {
+  bottom: 100%;
+  margin-bottom: 10px;
+}
+
+.dropdown-down {
+  top: 100%;
+  margin-top: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-item {
+  color: #003cff;
+  padding: 6px 12px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #e0e0ff;
+  transform: translateX(10px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .intro-title h2 {
+    font-size: 3rem;
+  }
+  
+  .logo-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo-title h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+
+  .chart-section-container {
+    gap: 40px;
+  }
+
+  .chart-section-title h2 {
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  .chart-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .chart-arrow {
+    transform: rotate(90deg);
+    font-size: 2rem;
+  }
+
+  .table-container {
+    gap: 40px;
+  }
+
+  .table-title h2 {
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  .tutorial-table {
+    font-size: 0.9rem;
+  }
+
+  .tutorial-table th,
+  .tutorial-table td {
+    padding: 15px 15px;
+  }
+
+  .tutorial-table th {
+    font-size: 1rem;
+  }
+
+  .tutorial-table td {
+    font-size: 0.95rem;
+  }
+}
+
+/* Collection Icon Styling */
+.collect-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #003cff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.collect-icon:hover {
+  background: white;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  color: #0029cc;
+}
+
+.collect-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Section positioning to accommodate icons */
+.logo-section,
+.chart-section-main,
+.table-section {
+  position: relative;
+}
+
+/* Additional styling for the Render the Markdown section */
+.render-table {
+  /* Inherits all styling from .tutorial-table */
+}
+
+.render-table th {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.render-table tbody tr:nth-child(odd) {
+  background: rgba(124, 58, 237, 0.1);
+}
+
+.render-table tbody tr:nth-child(even) {
+  background: rgba(168, 85, 247, 0.1);
+}
+
+/* Responsive adjustments for collection icons */
+@media (max-width: 768px) {
+  .collect-icon {
+    width: 35px;
+    height: 35px;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .collect-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+

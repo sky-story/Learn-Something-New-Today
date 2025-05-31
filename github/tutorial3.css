@@ -1,0 +1,565 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Jersey 20', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  body {
+    background: linear-gradient(to bottom, #003cff, #b67cbf);
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .page-container {
+  min-height: 100vh; /* optional if you want it to be at least viewport height */
+  padding: 20px 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+  
+  /* Top brand styling */
+  .top-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    margin-left: 60px;
+  }
+  
+  
+  .brand-text {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .brand-link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .title {
+    font-size: 5rem;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+  }
+  
+  /* Arrow styling */
+  .arrow-svg {
+    width: 100px;
+    margin-left: 60px;
+    margin-top: 20px;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .arrow-svg:hover {
+    transform: translateX(10px);
+  }
+  
+  /* Sidebar styling with hover effects */
+  .sidebar {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.2rem;
+    padding: 0 40px;
+  }
+  
+  .sidebar-link {
+    text-decoration: none;
+    background: white;
+    color: #003cff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    width: fit-content;
+    transition: all 0.3s ease; /* Changed to 'all' to include both transform and background color */
+  }
+  
+  .sidebar-link:hover {
+    transform: translateX(10px);
+    background: #e0e0ff; /* Added the hover background color */
+  }
+  
+  .bottom-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    max-width: 600px;
+    opacity: 0.5;
+  }
+
+  /* Dropdown menu styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  .dropdown-up {
+    bottom: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .dropdown-down {
+    top: 100%;
+    margin-top: 10px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown-item {
+    color: #003cff;
+    padding: 6px 12px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #e0e0ff;
+    transform: translateX(10px);
+  }
+
+  .github-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 80px 60px 40px;
+  gap: 40px;
+}
+
+.intro-text {
+  max-width: 600px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.intro-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.intro-text ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.intro-text li {
+  margin-bottom: 8px;
+}
+
+.intro-image img {
+  max-width: 180px;
+  filter: brightness(0) invert(1);
+}
+
+/* Setup Section - Modified to have text left, code right */
+.github-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 80px 60px;
+  gap: 60px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.github-steps .steps-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.github-steps h2 {
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.github-steps ol {
+  list-style: decimal;
+  padding-left: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.github-steps li {
+  margin-bottom: 20px;
+}
+
+.github-steps .code-container {
+  flex: 1;
+  max-width: 700px;
+}
+
+.code-block {
+  background-color: #111;
+  padding: 20px 24px;
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  color: white;
+  width: 100%;
+  min-height: 300px;
+}
+
+.code-label {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.code-content {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.code-green {
+  color: #4caf50;
+}
+
+/* Enhanced code blocks for new sections */
+.section-code-block {
+  background-color: #111;
+  padding: 20px 24px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-family: 'JetBrains Mono', monospace;
+  color: white;
+  width: 100%;
+  min-height: 160px;
+}
+
+.section-code-block .code-label {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.section-code-block .code-content {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.code-yellow {
+  color: #ffeb3b;
+}
+
+.code-blue {
+  color: #2196f3;
+}
+
+/* New section styling for left-aligned title */
+.section-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 80px 40px;
+  gap: 80px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-left .section-title-container {
+  flex: 1;
+  max-width: 500px;
+}
+
+.section-left .section-title {
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.section-arrow {
+  width: 80px;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.section-arrow:hover {
+  transform: translateX(10px);
+}
+
+.section-left .section-content {
+  flex: 2;
+  max-width: 800px;
+}
+
+.section-content p {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* New section styling for right-aligned title */
+.section-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 80px 40px;
+  gap: 80px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-right .section-content {
+  flex: 2;
+  max-width: 800px;
+}
+
+.section-right .section-title-container {
+  flex: 1;
+  max-width: 500px;
+  text-align: right;
+}
+
+.section-right .section-title {
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.section-right .section-arrow {
+  float: right;
+  margin-left: auto;
+}
+
+/* Table-based sections styling - Made wider */
+.table-section {
+  margin: 100px 40px;
+  max-width: 1600px; /* Increased from 1400px */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table-section-title {
+  font-size: 4rem;
+  font-family: 'Jersey 20', sans-serif;
+  color: white;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.git-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.git-table th,
+.git-table td {
+  padding: 20px 24px; /* Increased padding */
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.git-table th {
+  font-weight: bold;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 1.2rem; /* Increased from 1.1rem */
+}
+
+.git-table td {
+  color: white;
+  font-size: 1.05rem; /* Slightly increased */
+}
+
+.git-command {
+  background: #111;
+  color: #ffffff;
+  padding: 6px 12px; /* Increased padding */
+  border-radius: 5px;
+  margin-right: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem; /* Slightly increased */
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.practice-item {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 20px; /* Increased padding */
+  border-radius: 8px;
+  margin: 5px 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.05rem; /* Increased from 1rem */
+  display: block;
+}
+
+/* New Card-Based Sections (replacing last two tables) */
+.card-section {
+  margin: 100px 40px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-section-title {
+  font-size: 4rem;
+  font-family: 'Jersey 20', sans-serif;
+  color: white;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.cards-grid {
+  display: grid;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* ≥ 900 px : force 3-across */
+@media (min-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 600 – 899 px : two-across */
+@media (min-width: 600px) and (max-width: 899px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* < 600 px : single column (mobile) */
+@media (max-width: 599px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.practice-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.practice-card h3 {
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.practice-card p {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.practice-steps {
+  list-style: none;
+  padding: 0;
+}
+
+.practice-steps li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 16px;
+  margin: 8px 0;
+  border-radius: 8px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+
+/* Branch Concepts Layout */
+.branch-concepts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.branch-card {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 25px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.branch-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.branch-card h4 {
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.branch-commands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.branch-command {
+  background: #111;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Tutorial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tutorial3.css" />
+</head>
+<body>
+  <div class="page-container">
+    <div class="top-brand">
+        <a href="index.html" class="brand-link">
+          <div class="brand-text">Learning<br>Something<br>New</div>
+        </a>
+      </div>
+
+    <div class="title">GitHub<br />Uploads</div>
+    <img src="../assets/Vector2.svg" alt="Arrow" class="arrow-svg" />
+
+    <div class="sidebar">
+        <div class="dropdown">
+          <a href="#" class="sidebar-link dropdown-toggle">Tutorials</a>
+          <div class="dropdown-content dropdown-up">
+            <a href="../markdowncells/tutorial1.html" class="dropdown-item">Markdown Cells</a>
+            <a href="../pythonfoundation/tutorial2.html" class="dropdown-item">Python Foundation</a>
+            <a href="../cursorapplication/tutorial4.html" class="dropdown-item">Cursor Application</a>
+          </div>
+        </div>
+        <a href="../quizpage/quiz.html" class="sidebar-link">Quiz</a>
+        <a href="#" class="sidebar-link">Milestones</a>
+        <a href="#" class="sidebar-link">My Notebook</a>
+      </div>
+
+    <img class="bottom-image" src="../assets/github1.png" alt="Markdown Example" />
+    
+  </div>
+
+<!-- GitHub Introduction Section -->
+<section class="github-intro">
+  <div class="intro-text">
+    <h2>Introduction</h2>
+    <p>GitHub is a cloud-based platform that hosts Git repositories online. It provides tools for collaboration, code review, project management, and community contributions.</p>
+    <ul>
+      <li>Store your code in the cloud.</li>
+      <li>Share your repositories with others.</li>
+      <li>Use features like pull requests, issues, and actions (CI/CD).</li>
+    </ul>
+  </div>
+  <div class="intro-image">
+    <img src="assets/github-logo.png" alt="GitHub Logo" />
+  </div>
+</section>
+
+<!-- GitHub Setup Steps Section - Modified Layout -->
+<section class="github-steps">
+  <div class="steps-content">
+    <h2>Setting Up Git & GitHub</h2>
+    <ol>
+      <li>Install Git: <a href="https://git-scm.com" target="_blank">git-scm.com</a></li>
+      <li>Create a GitHub account: <a href="https://github.com/join" target="_blank">github.com/join</a></li>
+      <li>Set up Git with GitHub and create your first repository</li>
+    </ol>
+  </div>
+  <div class="code-container">
+    <div class="code-block">
+      <div class="code-label">bash</div>
+      <div class="code-content">git config --global user.name <span class="code-green">"Your Name"</span>
+git config --global user.email <span class="code-green">"you@example.com"</span>
+
+# Verify your configuration
+git config --global --list
+
+# Create your first repository
+mkdir my-first-repo
+cd my-first-repo
+git init</div>
+    </div>
+  </div>
+</section>
+
+<!-- New Section: Creating Local Repository (Title Left) -->
+<section class="section-left">
+  <div class="section-title-container">
+    <h2 class="section-title">Creating a Local Git Repository</h2>
+    <img src="../assets/Vector2.svg" alt="Arrow" class="section-arrow" />
+  </div>
+  <div class="section-content">
+    <p>Start by creating a new project folder and initializing it as a Git repository. This creates a local version control system for your project.</p>
+    <div class="section-code-block">
+      <div class="code-label">terminal</div>
+      <div class="code-content"># Create a new project folder
+mkdir <span class="code-yellow">your-project-folder</span>
+cd <span class="code-yellow">your-project-folder</span>
+
+# Initialize Git repository
+git init
+
+# Add your first file
+echo <span class="code-green">"# My Project"</span> > README.md
+git add .
+git commit -m <span class="code-green">"Initial commit"</span>
+
+# Check repository status
+git status</div>
+    </div>
+  </div>
+</section>
+
+<!-- New Section: Uploading to GitHub (Title Right) -->
+<section class="section-right">
+  <div class="section-content">
+    <p>Once your local repository is ready, connect it to GitHub and push your code to the cloud. Make sure to create an empty repository on GitHub first.</p>
+    <div class="section-code-block">
+      <div class="code-label">terminal</div>
+      <div class="code-content"># Add GitHub remote repository
+git remote add origin <span class="code-blue">https://github.com/your-username/your-repo.git</span>
+
+# Set main branch
+git branch -M main
+
+# Push to GitHub for the first time
+git push -u origin main
+
+# For subsequent pushes
+git add .
+git commit -m <span class="code-green">"Your commit message"</span>
+git push</div>
+    </div>
+  </div>
+  <div class="section-title-container">
+    <h2 class="section-title">Uploading to GitHub [First Push]</h2>
+    <img src="../assets/Vector3.svg" alt="Arrow" class="section-arrow" />
+  </div>
+</section>
+
+<!-- Table Section 1: Common Git Commands -->
+<section class="table-section">
+  <h2 class="table-section-title">Common Git Commands</h2>
+  <table class="git-table">
+    <thead>
+      <tr>
+        <th>Command</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="git-command">git init</span></td>
+        <td>Initialize a new Git repository in your folder</td>
+      </tr>
+      <tr>
+        <td><span class="git-command">git status</span></td>
+        <td>Check current changes and repository status</td>
+      </tr>
+      <tr>
+        <td><span class="git-command">git add .</span></td>
+        <td>Stage all files for commit</td>
+      </tr>
+      <tr>
+        <td><span class="git-command">git add &lt;file&gt;</span></td>
+        <td>Stage specific file(s) for commit</td>
+      </tr>
+      <tr>
+        <td><span class="git-command">git commit -m "message"</span></td>
+        <td>Save a version snapshot with description</td>
+      </tr>
+      <tr>
+        <td><span class="git-command">git push</span></td>
+        <td>Upload commits to GitHub</td>
+      </tr>
+      <tr>
+        <td><span class="git-command">git clone [URL]</span></td>
+        <td>Download a project from GitHub</td>
+      </tr>
+      <tr>
+        <td><span class="git-command">git log</span></td>
+        <td>View commit history and changes</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Card Section: Practice Activity -->
+<section class="card-section">
+  <h2 class="card-section-title">Practice Activity</h2>
+  <div class="cards-grid">
+    <div class="practice-card">
+      <h3>Step 1</h3>
+      <p>Create Your First Project</p>
+      <ul class="practice-steps">
+        <li>Create a simple HTML project or Python script</li>
+        <li>Add some basic content to get started</li>
+        <li>Save your files in a dedicated folder</li>
+      </ul>
+    </div>
+    <div class="practice-card">
+      <h3>Step 2</h3>
+      <p>Initialize & Upload</p>
+      <ul class="practice-steps">
+        <li>Initialize Git in your project folder</li>
+        <li>Commit your initial files</li>
+        <li>Create a repository on GitHub</li>
+        <li>Push your code to GitHub</li>
+      </ul>
+    </div>
+    <div class="practice-card">
+      <h3>Step 3</h3>
+      <p>Make Changes & Update</p>
+      <ul class="practice-steps">
+        <li>Edit your files with new content</li>
+        <li>Stage and commit the changes</li>
+        <li>Push updates to GitHub</li>
+        <li>View your changes online</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Card Section: Understanding Branches -->
+<section class="card-section">
+  <h2 class="card-section-title">Understanding Branches</h2>
+  <div class="branch-concepts">
+    <div class="branch-card">
+      <h4>Feature Development</h4>
+      <p>Create new features without affecting the main code</p>
+      <div class="branch-commands">
+        <span class="branch-command">git checkout -b new-feature</span>
+        <span class="branch-command">git push origin new-feature</span>
+      </div>
+    </div>
+    <div class="branch-card">
+      <h4>Bug Fixes</h4>
+      <p>Fix issues in isolated branches for testing</p>
+      <div class="branch-commands">
+        <span class="branch-command">git checkout -b bugfix</span>
+        <span class="branch-command">git commit -m "Fixed issue"</span>
+      </div>
+    </div>
+    <div class="branch-card">
+      <h4>Team Collaboration</h4>
+      <p>Work together without conflicts</p>
+      <div class="branch-commands">
+        <span class="branch-command">git pull origin main</span>
+        <span class="branch-command">git merge feature-branch</span>
+      </div>
+    </div>
+    <div class="branch-card">
+      <h4>Experimentation</h4>
+      <p>Try new ideas safely without risk</p>
+      <div class="branch-commands">
+        <span class="branch-command">git branch experiment</span>
+        <span class="branch-command">git checkout experiment</span>
+      </div>
+    </div>
+    <div class="branch-card">
+      <h4>Switch Branches</h4>
+      <p>Move between different versions of your code</p>
+      <div class="branch-commands">
+        <span class="branch-command">git checkout main</span>
+        <span class="branch-command">git switch branch-name</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

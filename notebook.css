@@ -109,28 +109,101 @@ html, body {
   margin: auto;
 }
 
-.notebook-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 40px;
-}
-
-.notebook-section {
-  margin-bottom: 40px;
-  padding: 20px;
-  background: rgba(255 255 255 / 0.1);
+/* Section styling */
+.table-section {
+  margin-bottom: 3rem;
+  background: rgba(255 255 255 / 0.2);
   border-radius: 12px;
-  font-family: 'Arial', sans-serif;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 15px rgba(182, 124, 191, 0.2);
+  transition: background-color 0.3s ease;
 }
 
-.notebook-section h2 {
+.table-section:hover {
+  background: rgba(255 255 255 / 0.15);
+}
+
+/* Section titles */
+.table-title h2 {
   font-size: 2.2rem;
-  margin-bottom: 15px;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  user-select: none;
 }
 
+/* Table styling */
+.tutorial-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  color: #ffffff;
+  background: rgba(255 255 255 / 0.06);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.tutorial-table thead tr {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.tutorial-table thead th {
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 2px solid #ffffff;
+  user-select: none;
+}
+
+.tutorial-table tbody tr:nth-child(odd) {
+  background: rgba(182, 124, 191, 0.15);
+}
+
+.tutorial-table tbody td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  vertical-align: middle;
+}
+
+.tutorial-table code {
+  background: rgba(0, 0, 0, 1.0);
+  color: #ffffff;
+  padding: 0.15rem 0.3rem;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.tutorial-table a {
+  color: #90cdf4;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.tutorial-table a:hover {
+  color: #ffffff;
+}
+
+/* Inline code style */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  background: rgba(255 255 255 / 0.12);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  color: #ffd966;
+  user-select: text;
+}
+
+/* Paragraphs and lists inside notebook */
 .notebook-section p,
 .notebook-section ul {
   font-size: 1.3rem;
   line-height: 1.5;
+}
+
+.notebook-section ul {
+  padding-left: 20px;
 }
 
 pre {
@@ -144,6 +217,32 @@ pre {
   margin-top: 10px;
 }
 
-ul {
-  padding-left: 20px;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-wrapper {
+    padding: 20px 20px;
+  }
+
+  .sidebar {
+    margin-left: 0;
+    width: 100%;
+    padding-left: 20px;
+    margin-top: 0;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 1rem;
+  }
+
+  .sidebar.closed {
+    margin-left: 0;
+  }
+
+  .menu-item {
+    padding: 6px 10px;
+    font-size: 1rem;
+  }
+
+  .main-wrapper.expanded {
+    padding-left: 20px;
+  }
 }

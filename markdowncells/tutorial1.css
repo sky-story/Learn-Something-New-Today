@@ -1,3 +1,4 @@
+/* Reset and base */
 * {
   margin: 0;
   padding: 0;
@@ -99,6 +100,7 @@ body {
 .logo-section {
   margin: 80px 0 100px 0;
   padding: 0 60px;
+  position: relative;
 }
 
 .logo-container {
@@ -166,10 +168,11 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Chart Section for Create or Select a Cell - Updated to be wider and centered */
+/* Chart Section for Create or Select a Cell */
 .chart-section-main {
   margin: 100px 0;
   padding: 0 60px;
+  position: relative;
 }
 
 .chart-section-container {
@@ -264,10 +267,11 @@ body {
   font-weight: bold;
 }
 
-/* Table Sections - Updated to be centered below title */
+/* Table Sections */
 .table-section {
   margin: 100px 0;
   padding: 0 60px;
+  position: relative;
 }
 
 .table-container {
@@ -346,6 +350,20 @@ body {
 .tutorial-table a {
   color: #90cdf4;
   text-decoration: underline;
+}
+
+/* Render Table Specific Styling */
+.render-table th {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.render-table tbody tr:nth-child(odd) {
+  background: rgba(124, 58, 237, 0.1);
+}
+
+.render-table tbody tr:nth-child(even) {
+  background: rgba(168, 85, 247, 0.1);
 }
 
 /* Sidebar styling with hover effects */
@@ -428,8 +446,118 @@ body {
   transform: translateX(10px);
 }
 
+/* Collection Icon Styling */
+.collect-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #003cff;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border: 2px solid transparent;
+}
+
+.collect-icon:hover {
+  background: white;
+  transform: scale(1.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  color: #0029cc;
+  border-color: #003cff;
+}
+
+.collect-icon:active {
+  transform: scale(0.95);
+}
+
+.collect-icon svg {
+  width: 22px;
+  height: 22px;
+  transition: all 0.3s ease;
+}
+
+.collect-icon:hover svg {
+  transform: rotate(5deg);
+}
+
+/* Collection Success Toast */
+.collection-toast {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transform: translateX(120%);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.collection-toast.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.collection-toast::before {
+  content: '✓';
+  margin-right: 8px;
+  font-weight: bold;
+}
+
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .logo-boxes {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .logo-box {
+    min-width: 350px;
+  }
+}
+
 @media (max-width: 768px) {
+  .page-container {
+    padding: 15px 20px;
+    margin-bottom: 80px;
+  }
+  
+  .top-brand {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  
+  .title {
+    font-size: 3rem;
+    margin-left: 20px;
+    margin-top: 40px;
+  }
+  
+  .arrow-svg {
+    width: 80px;
+    margin-left: 20px;
+  }
+  
+  .intro-section {
+    padding: 0 20px;
+    margin: 60px 0 40px 0;
+  }
+  
   .intro-container {
     flex-direction: column;
     gap: 40px;
@@ -438,11 +566,43 @@ body {
   
   .intro-title h2 {
     font-size: 3rem;
+    white-space: normal;
+  }
+  
+  .intro-text {
+    font-size: 1.1rem;
+  }
+  
+  .logo-section,
+  .chart-section-main,
+  .table-section {
+    padding: 0 20px;
+    margin: 60px 0;
   }
   
   .logo-boxes {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
+  }
+  
+  .logo-box {
+    min-width: 300px;
+    min-height: 320px;
+    padding: 30px 20px;
+  }
+  
+  .logo-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .logo-label {
+    font-size: 1.8rem;
+  }
+  
+  .logo-sublabel {
+    font-size: 1rem;
   }
   
   .logo-title h2 {
@@ -450,114 +610,62 @@ body {
     text-align: center;
   }
   
-  .title {
-    font-size: 3rem;
-  }
-
-  .chart-section-container {
+  .chart-section-container,
+  .table-container {
     gap: 40px;
   }
-
-  .chart-section-title h2 {
-    font-size: 3rem;
-    text-align: left;
+  
+  .chart-section-title h2,
+  .table-title h2 {
+    font-size: 2.5rem;
+    text-align: center;
   }
-
+  
   .chart-container {
     flex-direction: column;
     gap: 20px;
   }
-
+  
+  .chart-step {
+    padding: 30px 20px;
+    min-height: 180px;
+  }
+  
+  .step-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .step-content p {
+    font-size: 1.1rem;
+  }
+  
   .chart-arrow {
     transform: rotate(90deg);
     font-size: 2rem;
   }
-
-  .table-container {
-    gap: 40px;
-  }
-
-  .table-title h2 {
-    font-size: 3rem;
-    text-align: left;
-  }
-
+  
   .tutorial-table {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
-
+  
   .tutorial-table th,
   .tutorial-table td {
-    padding: 15px 15px;
+    padding: 12px 15px;
   }
-
+  
   .tutorial-table th {
     font-size: 1rem;
   }
-
+  
   .tutorial-table td {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
-}
-
-/* Collection Icon Styling */
-.collect-icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: #003cff;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-}
-
-.collect-icon:hover {
-  background: white;
-  transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  color: #0029cc;
-}
-
-.collect-icon svg {
-  width: 20px;
-  height: 20px;
-}
-
-/* Section positioning to accommodate icons */
-.logo-section,
-.chart-section-main,
-.table-section {
-  position: relative;
-}
-
-/* Additional styling for the Render the Markdown section */
-.render-table {
-  /* Inherits all styling from .tutorial-table */
-}
-
-.render-table th {
-  background: rgba(255, 255, 255, 0.15);
-  color: white;
-}
-
-.render-table tbody tr:nth-child(odd) {
-  background: rgba(124, 58, 237, 0.1);
-}
-
-.render-table tbody tr:nth-child(even) {
-  background: rgba(168, 85, 247, 0.1);
-}
-
-/* Responsive adjustments for collection icons */
-@media (max-width: 768px) {
+  
+  .tutorial-table code {
+    font-size: 0.8rem;
+    padding: 1px 4px;
+  }
+  
   .collect-icon {
     width: 35px;
     height: 35px;
@@ -569,6 +677,73 @@ body {
     width: 18px;
     height: 18px;
   }
+  
+  .sidebar {
+    bottom: 20px;
+    left: 20px;
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+  
+  .collection-toast {
+    top: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    font-size: 0.9rem;
+  }
 }
 
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .intro-title h2 {
+    font-size: 2.5rem;
+  }
+  
+  .chart-section-title h2,
+  .table-title h2 {
+    font-size: 2rem;
+  }
+  
+  .logo-title h2 {
+    font-size: 2rem;
+  }
+  
+  .logo-box {
+    min-width: 280px;
+    min-height: 300px;
+  }
+  
+  .tutorial-table {
+    font-size: 0.8rem;
+  }
+  
+  .tutorial-table th,
+  .tutorial-table td {
+    padding: 10px 12px;
+  }
+}
 
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .sidebar,
+  .collect-icon,
+  .collection-toast,
+  .bottom-image {
+    display: none;
+  }
+  
+  .logo-box,
+  .chart-step,
+  .tutorial-table {
+    background: white;
+    border: 1px solid #ccc;
+  }
+}

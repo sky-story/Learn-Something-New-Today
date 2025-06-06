@@ -11,7 +11,7 @@
 <body>
   <div class="page-container">
     <div class="top-brand">
-        <a href="index.html" class="brand-link">
+        <a href="../index.html" class="brand-link">
           <div class="brand-text">Learning<br>Something<br>New</div>
         </a>
       </div>
@@ -23,14 +23,14 @@
         <div class="dropdown">
           <a href="#" class="sidebar-link dropdown-toggle">Tutorials</a>
           <div class="dropdown-content dropdown-up">
-            <a href="tutorial2.html" class="dropdown-item">Python Foundation</a>
-            <a href="tutorial3.html" class="dropdown-item">GitHub Uploads</a>
-            <a href="tutorial4.html" class="dropdown-item">Copilot Application</a>
+            <a href="../pythonfoundation/tutorial2.html" class="dropdown-item">Python Foundation</a>
+            <a href="../github/tutorial3.html" class="dropdown-item">GitHub Uploads</a>
+            <a href="../cursorapplication/tutorial4.html" class="dropdown-item">Copilot Application</a>
           </div>
         </div>
         <a href="quiz.html" class="sidebar-link">Quiz</a>
         <a href="#" class="sidebar-link">Milestones</a>
-        <a href="notebook.html" class="sidebar-link">My Notebook</a>
+        <a href="../notebook.html" class="sidebar-link">My Notebook</a>
       </div>
 
     <img class="bottom-image" src="../assets/image1.png" alt="Markdown Example" />
@@ -49,13 +49,12 @@
   </section>
 
   <!-- Logo Section -->
-  <section class="logo-section" data-section-id="platforms">
-    <div class="collect-icon" onclick="handleCollectClick()">
-  <!-- Replace this with any SVG you like -->
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2L15 8l6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"/>
-  </svg>
-</div>
+  <section class="logo-section" data-section-id="platforms" data-section-title="Where You Can Use Markdown Cells" data-category="markdown-basics">
+    <div class="collect-icon" onclick="collectSection('platforms', 'Where You Can Use Markdown Cells', 'markdown-basics')">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L15 8l6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"/>
+      </svg>
+    </div>
     <div class="logo-container">
       <div class="logo-title">
         <h2>Where You Can Use Markdown Cells</h2>
@@ -80,16 +79,10 @@
   </section>
 
   <!-- Create or Select a Cell Section -->
-  <section class="chart-section-main" data-section-id="create-cell">
-    <div class="collect-icon" onclick="handleCollectClick()">
-  <!-- Replace this with any SVG you like -->
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2L15 8l6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"/>
-  </svg>
-</div>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M19 7H16V10H14V7H11V5H14V2H16V5H19V7Z" fill="currentColor"/>
-        <path d="M21 2H3C1.9 2 1 2.9 1 4V18C1 19.1 1.9 20 3 20H8V18H3V6L12 13L21 6V10H23V4C23 2.9 22.1 2 21 2ZM12 11L3 4H21L12 11Z" fill="currentColor"/>
+  <section class="chart-section-main" data-section-id="create-cell" data-section-title="Create or Select a Cell" data-category="markdown-basics">
+    <div class="collect-icon" onclick="collectSection('create-cell', 'Create or Select a Cell', 'markdown-basics')">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L15 8l6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"/>
       </svg>
     </div>
     <div class="chart-section-container">
@@ -119,16 +112,10 @@
   </section>
 
   <!-- Change to Markdown Mode Section -->
-  <section class="table-section" data-section-id="markdown-mode">
-    <div class="collect-icon" onclick="handleCollectClick()">
-  <!-- Replace this with any SVG you like -->
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2L15 8l6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"/>
-  </svg>
-</div>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M19 7H16V10H14V7H11V5H14V2H16V5H19V7Z" fill="currentColor"/>
-        <path d="M21 2H3C1.9 2 1 2.9 1 4V18C1 19.1 1.9 20 3 20H8V18H3V6L12 13L21 6V10H23V4C23 2.9 22.1 2 21 2ZM12 11L3 4H21L12 11Z" fill="currentColor"/>
+  <section class="table-section" data-section-id="markdown-mode" data-section-title="Change to Markdown Mode" data-category="markdown-basics">
+    <div class="collect-icon" onclick="collectSection('markdown-mode', 'Change to Markdown Mode', 'markdown-basics')">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L15 8l6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"/>
       </svg>
     </div>
     <div class="table-container">
@@ -163,16 +150,10 @@
   </section>
 
   <!-- Write Markdown Content Section -->
-  <section class="table-section" data-section-id="markdown-content">
-    <div class="collect-icon" onclick="handleCollectClick()">
-  <!-- Replace this with any SVG you like -->
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2L15 8l6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"/>
-  </svg>
-</div>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M19 7H16V10H14V7H11V5H14V2H16V5H19V7Z" fill="currentColor"/>
-        <path d="M21 2H3C1.9 2 1 2.9 1 4V18C1 19.1 1.9 20 3 20H8V18H3V6L12 13L21 6V10H23V4C23 2.9 22.1 2 21 2ZM12 11L3 4H21L12 11Z" fill="currentColor"/>
+  <section class="table-section" data-section-id="markdown-content" data-section-title="Write Markdown Content" data-category="markdown-syntax">
+    <div class="collect-icon" onclick="collectSection('markdown-content', 'Write Markdown Content', 'markdown-syntax')">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L15 8l6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"/>
       </svg>
     </div>
     <div class="table-container">
@@ -251,16 +232,10 @@
   </section>
 
   <!-- Render the Markdown Section -->
-  <section class="table-section" data-section-id="render-markdown">
-    <div class="collect-icon" onclick="handleCollectClick()">
-  <!-- Replace this with any SVG you like -->
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2L15 8l6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"/>
-  </svg>
-</div>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M19 7H16V10H14V7H11V5H14V2H16V5H19V7Z" fill="currentColor"/>
-        <path d="M21 2H3C1.9 2 1 2.9 1 4V18C1 19.1 1.9 20 3 20H8V18H3V6L12 13L21 6V10H23V4C23 2.9 22.1 2 21 2ZM12 11L3 4H21L12 11Z" fill="currentColor"/>
+  <section class="table-section" data-section-id="render-markdown" data-section-title="Render the Markdown" data-category="markdown-basics">
+    <div class="collect-icon" onclick="collectSection('render-markdown', 'Render the Markdown', 'markdown-basics')">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L15 8l6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"/>
       </svg>
     </div>
     <div class="table-container">
@@ -294,17 +269,33 @@
     </div>
   </section>
 
+  <!-- Collection Success Toast -->
+  <div id="collection-toast" class="collection-toast">
+    Section added to notebook!
+  </div>
+
   <script>
+    // Collection System JavaScript
     function collectSection(sectionId, sectionTitle, category) {
       // Get the section element
       const section = document.querySelector(`[data-section-id="${sectionId}"]`);
-      if (!section) return;
+      if (!section) {
+        console.error('Section not found:', sectionId);
+        return;
+      }
+      
+      // Create a clean copy of the section without the collection icon
+      const sectionClone = section.cloneNode(true);
+      const iconElement = sectionClone.querySelector('.collect-icon');
+      if (iconElement) {
+        iconElement.remove();
+      }
       
       // Extract section content
-      const content = section.innerHTML;
+      const content = sectionClone.innerHTML;
       
-      // Get existing notebook data or create new
-      let notebookData = JSON.parse(localStorage.getItem('notebookData') || '{}');
+      // Get existing notebook data from memory storage
+      let notebookData = window.notebookData || {};
       
       // Initialize category if it doesn't exist
       if (!notebookData[category]) {
@@ -318,81 +309,68 @@
         id: sectionId,
         title: sectionTitle,
         content: content,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        category: category
       };
       
+      let message = '';
       if (existingIndex > -1) {
         // Update existing section
         notebookData[category][existingIndex] = sectionData;
-        showFeedback('Section updated in notebook!');
+        message = 'Section updated in notebook!';
       } else {
         // Add new section
         notebookData[category].push(sectionData);
-        showFeedback('Section added to notebook!');
+        message = 'Section added to notebook!';
       }
       
-      // Save to localStorage
-      localStorage.setItem('notebookData', JSON.stringify(notebookData));
+      // Save to memory storage
+      window.notebookData = notebookData;
       
       // Visual feedback - animate the icon
       const icon = section.querySelector('.collect-icon');
-      icon.style.transform = 'scale(1.2)';
-      icon.style.color = '#4ade80';
-      setTimeout(() => {
-        icon.style.transform = 'scale(1)';
-        icon.style.color = '';
-      }, 300);
-    }
-    
-    function showFeedback(message) {
-      // Create feedback element
-      const feedback = document.createElement('div');
-      feedback.textContent = message;
-      feedback.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #4ade80;
-        color: white;
-        padding: 12px 24px;
-        border-radius: 8px;
-        font-weight: bold;
-        z-index: 1000;
-        animation: slideIn 0.3s ease-out;
-      `;
-      
-      // Add animation keyframes
-      if (!document.querySelector('#feedback-styles')) {
-        const style = document.createElement('style');
-        style.id = 'feedback-styles';
-        style.textContent = `
-          @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-          }
-        `;
-        document.head.appendChild(style);
+      if (icon) {
+        icon.style.transform = 'scale(1.2)';
+        icon.style.backgroundColor = '#4ade80';
+        icon.style.color = 'white';
+        
+        setTimeout(() => {
+          icon.style.transform = 'scale(1)';
+          icon.style.backgroundColor = '';
+          icon.style.color = '';
+        }, 500);
       }
       
-      document.body.appendChild(feedback);
+      // Show success message
+      showCollectionToast(message);
       
-      // Remove after 3 seconds
+      console.log('Section collected:', sectionData);
+      console.log('Current notebook data:', notebookData);
+    }
+    
+    function showCollectionToast(message) {
+      const toast = document.getElementById('collection-toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      
       setTimeout(() => {
-        feedback.remove();
+        toast.classList.remove('show');
       }, 3000);
     }
+    
+    // Function to get collected data (for notebook page)
+    function getNotebookData() {
+      return window.notebookData || {};
+    }
+    
+    // Function to clear notebook data
+    function clearNotebookData() {
+      window.notebookData = {};
+    }
+    
+    // Initialize notebook data storage
+    window.notebookData = window.notebookData || {};
   </script>
 
 </body>
 </html>
-
-<script>
-  function handleCollectClick() {
-    console.log("Icon clicked!");
-    // Example action: navigate to notebook.html
-    window.location.href = "notebook.html";
-
-    // OR: Change content dynamically without reloading
-    // document.getElementById("notebook-container").innerHTML = "New Content Here";
-  }
-</script>

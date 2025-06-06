@@ -14,10 +14,10 @@
     <aside class="sidebar" id="sidebar">
       <div class="brand-text">Learning<br>Something<br>New</div>
       <nav class="sidebar-menu">
-        <a href="tutorial1.html" class="menu-item">Markdown Cells</a>
-        <a href="tutorial2.html" class="menu-item">Python Foundation</a>
-        <a href="#" class="menu-item">GitHub Uploads</a>
-        <a href="#" class="menu-item">Copilot Application</a>
+        <a href="../markdowncells/tutorial1.html" class="menu-item">Markdown Cells</a>
+        <a href="../pythonfoundation/tutorial2.html" class="menu-item">Python Foundation</a>
+        <a href="../github/tutorial3.html" class="menu-item">GitHub Uploads</a>
+        <a href="../cursorapplication/tutorial4.html" class="menu-item">Copilot Application</a>
       </nav>
     </aside>
 
@@ -26,31 +26,121 @@
       <button id="sidebar-toggle" aria-label="Toggle Sidebar">☰</button>
 
       <main class="notebook-content">
-        <h1>Computer Science Learning Notebook</h1>
 
-        <section class="notebook-section">
-          <h2>Introduction to Algorithms</h2>
-          <p>Algorithms are step-by-step instructions for solving problems efficiently.</p>
+        <!-- Change to Markdown Mode Section -->
+        <section class="table-section" data-section-id="markdown-mode" data-section-title="Change to Markdown Mode" data-category="markdown-basics">
+          <div class="collect-icon" onclick="collectSection('markdown-mode', 'Change to Markdown Mode', 'markdown-basics')">
+          </div>
+          <div class="table-container">
+            <div class="table-title">
+              <h2>Change to Markdown Mode</h2>
+            </div>
+            <div class="table-content">
+              <table class="tutorial-table">
+                <thead>
+                  <tr>
+                    <th>Platform</th>
+                    <th>How to Convert Cell to Markdown</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Colab</strong></td>
+                    <td>Click the dropdown (left of the cell) and choose "Text"</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Jupyter</strong></td>
+                    <td>Press Esc, then press M</td>
+                  </tr>
+                  <tr>
+                    <td><strong>VS Code</strong></td>
+                    <td>Use the #%% [markdown] magic comment above the cell, or select Markdown from the cell type menu</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </section>
 
-        <section class="notebook-section">
-          <h2>Sample Python Code</h2>
-          <pre><code>def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n - 1)
-</code></pre>
+        <!-- Write Markdown Content Section -->
+        <section class="table-section" data-section-id="markdown-content" data-section-title="Write Markdown Content" data-category="markdown-syntax">
+          <div class="collect-icon" onclick="collectSection('markdown-content', 'Write Markdown Content', 'markdown-syntax')">
+          </div>
+          <div class="table-container">
+            <div class="table-title">
+              <h2>Write Markdown Content</h2>
+            </div>
+            <div class="table-content">
+              <table class="tutorial-table">
+                <thead>
+                  <tr>
+                    <th>Basics</th>
+                    <th>Syntax</th>
+                    <th>Output</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Heading 1</td>
+                    <td><code># Heading 1</code></td>
+                    <td><strong>Large Heading</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Heading 2</td>
+                    <td><code>## Heading 2</code></td>
+                    <td><strong>Medium Heading</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Bold</td>
+                    <td><code>**bold** or __bold__</code></td>
+                    <td><strong>bold</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Italic</td>
+                    <td><code>*italic* or _italic_</code></td>
+                    <td><em>italic</em></td>
+                  </tr>
+                  <tr>
+                    <td>Bullet List</td>
+                    <td><code>- Item 1<br>- Item 2</code></td>
+                    <td>• Item 1<br>• Item 2</td>
+                  </tr>
+                  <tr>
+                    <td>Numbered List</td>
+                    <td><code>1. Item<br>2. Item</code></td>
+                    <td>1. Item<br>2. Item</td>
+                  </tr>
+                  <tr>
+                    <td>Code (inline)</td>
+                    <td><code>`code`</code></td>
+                    <td><code>code</code></td>
+                  </tr>
+                  <tr>
+                    <td>Code Block</td>
+                    <td><code>```python<br>print("Hello")<br>```</code></td>
+                    <td>Code block</td>
+                  </tr>
+                  <tr>
+                    <td>Link</td>
+                    <td><code>[Google](https://google.com)</code></td>
+                    <td><a href="#">Google</a></td>
+                  </tr>
+                  <tr>
+                    <td>Image</td>
+                    <td><code>![alt text](image_url)</code></td>
+                    <td>Image</td>
+                  </tr>
+                  <tr>
+                    <td>Horizontal Line</td>
+                    <td><code>---</code></td>
+                    <td>___________</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </section>
 
-        <section class="notebook-section">
-          <h2>Key Concepts</h2>
-          <ul>
-            <li>Time Complexity</li>
-            <li>Space Complexity</li>
-            <li>Big O Notation</li>
-          </ul>
-        </section>
       </main>
 
     </div>
